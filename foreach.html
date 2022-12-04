@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello,World!</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      {{message}}
+    </div>
+    <script>
+      new Vue({
+        el: "#app",
+        data:{
+          message:"Hello World!"
+        }
+      });
+      var list = [5,3,1,2,4];
+      for(var i = 0; i < list.length; i++){
+        console.log((i+1)+'番目の数値は'+list[i]+'です。');
+      }
+      list.forEach((value,i)=>console.log((i+1)+'番目の数値は'+list[i]+'です。'));
+      list.sort().forEach((value,i)=>console.log((i+1)+'番目の数値は'+value+'です。'));
+      list.sort().filter(value=>value<=3).forEach((value,i)=>console.log((i+1)+'番目の数値は'+value+'です。'));
+    </script>
+  </body>
+</html>
