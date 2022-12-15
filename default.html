@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>サンプル</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>セレクター</h1>
+      <div id="result">
+        <ul class="">
+          <li id="one" class="list one">1つ目</li>
+          <li id="two" class="list two">2つ目</li>
+          <li id="three" class="list three">3つ目</li>
+          <li class="list four">4つ目</li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      var bodyElement = document.querySelector('body');
+      console.log(bodyElement);
+      var liElements = document.querySelectorAll('li');
+      console.log(liElements);
+      console.log(liElements.item(1));
+      liElements.item(3).textContent = 'four';
+      console.log(document.getElementsByTagName('li').item(1));
+      // document.querySelector('body').textContent = 'HTML全体を書き換え';
+      var one = document.querySelector('#one');
+      console.log(one);
+      var two = document.getElementById('two');
+      console.log(two);
+      var list = document.querySelectorAll('.list');
+      console.log(list);
+      var one = document.querySelector('.list');
+      console.log(one);
+      var four = document.querySelector('.four');
+      console.log(four);
+      console.log(document.getElementsByClassName('two').item(0));
+      console.log('');
+      var list = document.querySelectorAll('#result li');
+      console.log(list.item(0));
+      var list2 = document.querySelectorAll('.container #result li');
+      console.log(list2.item(1));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello,World!</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      {{message}}
+    </div>
+    <script>
+      new Vue({
+        el: "#app",
+        data:{
+          message:"Hello World!"
+        }
+      });
+      function func2(arg1){
+        console.log(arg1);
+        console.log(arg1.name);
+        console.log(arg1.tel);
+      }
+      func2({name:'hirosue', tel:'tokyo-to'});
+
+      function showAlert(){alert('alert!');};
+      function delayedAlert(duration = 2000){
+        setTimeout(showAlert,duration);
+      }
+      delayedAlert(0);
+    </script>
+  </body>
+</html>
